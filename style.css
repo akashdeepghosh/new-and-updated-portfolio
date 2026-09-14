@@ -1,0 +1,107 @@
+/* minimal text portfolio: one column, serif body, mono labels */
+
+:root {
+  --bg: #FAFAF7;
+  --ink: #111;
+  --muted: #555;
+  --line: #e3e0d8;
+  --max: 38rem;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1.25rem 4rem;
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.role {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+.contact {
+  margin: 0 0 2.5rem;
+  line-height: 1.8;
+}
+
+section { margin-bottom: 2rem; }
+
+h2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+
+section p:last-child { margin-bottom: 0; }
+
+a { color: inherit; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+
+ul.work {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.work li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+}
+
+ul.work li::before {
+  content: "– ";
+  color: var(--muted);
+}
+
+ul.work li:last-child { margin-bottom: 0; }
+
+dl.jobs { margin: 0; }
+dl.jobs div { margin-bottom: 0.75rem; }
+dl.jobs div:last-child { margin-bottom: 0; }
+dl.jobs dt { font-weight: 700; }
+dl.jobs dd { margin: 0; }
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+footer p { margin: 0; }
+
+@media print {
+  body { padding: 0; font-size: 11pt; }
+  a { text-decoration: none; }
+}
